@@ -1,0 +1,109 @@
+{  
+  "expo": {
+    "owner": "joshipiyush",
+    "name": "livecat",
+    "slug": "livecat",
+    "scheme": "livecat",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/app-icon-all.png",
+    "splash": {
+      "image": "./assets/images/splash-logo-all.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#002395"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 60
+    },
+    "jsEngine": "hermes",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android": {
+      "versionCode":1,
+      "icon": "./assets/images/app-icon-android-legacy.png",
+      "package": "com.livecat",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/app-icon-android-adaptive-foreground.png",
+        "backgroundImage": "./assets/images/app-icon-android-adaptive-background.png"
+      },
+      "permissions": [       
+        "PHOTO_LIBRARY_ADD_ONLY",
+        "PHOTO_LIBRARY",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"        
+      ],
+      "splash": {
+        "image": "./assets/images/splash-logo-all.png",
+        "resizeMode": "cover",
+        "backgroundColor": "#002395"
+      }     
+    },
+    "ios": {
+      "icon": "./assets/images/app-icon-ios.png",
+      "supportsTablet": true,
+      "bundleIdentifier": "com.livecat",
+      "splash": {
+        "image": "./assets/images/splash-logo-ios-mobile.png",
+        "tabletImage": "./assets/images/splash-logo-ios-tablet.png",
+        "resizeMode": "cover",
+        "backgroundColor": "#002395"
+      },
+      "infoPlist": {        
+        "NSPhotoLibraryAddUsageDescription": "This app requires access to your photo library to save photos.",
+        "NSPhotoLibraryUsageDescription": "This app requires access to your photo library to access photos.",
+        "NSLocationWhenInUseUsageDescription": "We need your location to provide accurate services",
+        "NSLocationAlwaysUsageDescription": "We need your location to provide accurate services"        
+      }
+    },
+    "web": {
+      "favicon": "./assets/images/app-icon-web-favicon.png",
+      "splash": {
+        "image": "./assets/images/splash-logo-web.png",
+        "resizeMode": "cover",
+        "backgroundColor": "#002395"
+      },
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-dev-launcher",
+        {
+          "launchMode": "most-recent"
+        }
+      ],
+      "./plugins/react-native-share",
+      "expo-localization",
+      "expo-file-system",
+      "expo-font",
+      "expo-asset",
+
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "newArchEnabled": true
+          },
+          "android": {
+            "newArchEnabled": true
+          }
+        }
+      ],
+      [
+        "expo-document-picker",
+        {
+          "iCloudContainerEnvironment": "Production"
+        }
+      ]     
+    ],
+
+    "extra": {
+      "eas": {
+        "projectId": "bc4dd4f8-5969-4577-8cd2-dd03d1bb7594"
+      }
+    },
+    "experiments": {
+      "tsconfigPaths": true
+    }
+  }  
+}

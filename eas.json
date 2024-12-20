@@ -1,0 +1,61 @@
+{
+  "cli": {
+    "version": ">= 5.6.0",
+    "appVersionSource": "local"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "android": {
+        "resourceClass": "large",
+        "gradleCommand": ":app:assembleDebug"
+      },
+      "ios": {
+        "resourceClass": "large",
+        "buildConfiguration": "Debug"
+      },
+      "env": {
+        "APP_ICON": "./assets/images/app-icon-all.png",
+      "APP_NAME": "Livecat"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "env": {
+        "APP_ICON": "./assets/images/app-icon-all.png",
+        "APP_NAME": "Livecat"
+      }
+    },
+    "production": {
+      "distribution": "store",
+      "env": {
+        "APP_ICON": "./assets/images/app-icon-all.png",
+        "APP_NAME": "Livecat"
+      }
+    },
+    "test": {
+      "env": {
+        "APP_ICON": "./assets/images/app-icon-all.png",
+        "APP_NAME": "Livecat"
+      }
+    }
+
+  },
+  "submit": {
+    "production": {
+      "android": {
+        "serviceAccountKeyPath": "./pc-api-6732374394442562398-24-80c1d400c56b.json",
+        "track": "beta",
+        "releaseStatus": "draft",        
+        "changesNotSentForReview": false,
+        "applicationId": "0fad9a38-dc0c-493d-b68b-fab7b828df11"
+      },
+      "ios": {
+        "appleId": "piyush@technoace.in",
+        "ascAppId": "1234567890",
+        "appleTeamId": "AB12XYZ34S"
+      }
+    }
+  }
+}
